@@ -7,12 +7,18 @@
 		// no native support; maybe try a fallback?
 	}
 }*/
+
+
+
+$(document).ready(function(){
+
 latitude=0;
 longitude=0;
-	function get_location() {
+		function get_location() {
 		if (Modernizr.geolocation) {
 			navigator.geolocation.getCurrentPosition(show_map);
 		} else {
+			$("#map").innerHTML="No tienes geolocation"
 		// no native support; maybe try a fallback?
 		}
 	}
@@ -27,9 +33,6 @@ longitude=0;
 		}).addTo(map);
 // let's show a map or do something interesting!
 	}
-
-$(document).ready(function(){
-
 	get_location()
    
 	
