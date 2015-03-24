@@ -25,6 +25,7 @@ longitude=0;
 	function show_map(position) {
 		latitude = position.coords.latitude;
 		longitude = position.coords.longitude;
+		alert(longitude)
 		 var map = L.map('map').setView([latitude,longitude], 13);
 
 // add an OpenStreetMap tile layer
